@@ -5,62 +5,145 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="blog;profile;resume" />  
     <meta name="description" content="about my programming life" />
+    <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
     <style type="text/css">
-      .profile-picture {
-        position:relative;
-        overflow:hidden;
+       /* This is the head title. */
+      .memo {
+        /* This needs to be inline-block display. */
+        display: inline-block;
+        
+        /* Width and height of the box */
+        width: 1024px;
+        height: 100px;
+        
+        /* Position of the box on the page. */
+        margin: 50px 10px -50px 10px;
+        
+        padding-top: 100px;
+        font-family: Eater, "Comic Sans MS", cursive, sans-serif;
+        font-size: 50px;
+        
+        /* Background color of the top box */
+        background-color: #fefefe;
+      }
+      
+      /* This is the circular image. */
+      .bio-photo {
         border-radius: 50%;
-        height: 200px;
-        width: 200px;
-      }
-
-      .profile-picture img {
-        position:absolute;
+        display: block;
+        width: 150px;
         height: auto;
-        width: auto;    
-        max-width:100%;
       }
-
-      .centered img {
-        position:absolute;
-        top:50%;
-        transform:translateY(-50%);
+      /* This is the outer div. Top white box. */
+      .box {
+        /* This needs to be inline-block display. */
+        display: inline-block;
+        
+        /* Width and height of the box */
+        width: 1024px;
+        height: 200px;
+        
+        /* Position of the box on the page. */
+        margin: 0px 10px 10px 10px;
+        
+        /* Background color of the top box */
+        background-color: #fefefe;
       }
-      th, td {
-        border:#cccccc solid 1px;
+      /* This is for the span where the image or text is placed. */
+      .box span {
+        /* This needs to be block display. */
+        display: block;
+        
+        /* Size of the circle  */
+        width: 150px;
+        height: 150px;
+        
+        /* This changes the square into a circle */
+        border-radius: 100%;
+         
+        /* Necessary for the placement of the circle  */
+        margin-top: 125px;
+        margin-left: 437px;
+        
+        /*  The border around the circle  */
+        /*  border: 2px solid black; */
+        
+        /* This would create a nice white semi-circle under the photo.   */
+        /* border: 20px solid white; */
+        
+        /* This would create a nice gray semi-circle under the photo.   */
+        border: 20px solid white;
+        
+        /*  Relevant if using text.  */
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 150px;
+        background-color: #81D4FA;
+        z-index: 20;
+      }
+      /* This is the inner div. Bottom gray box. */
+      .box2 {
+        /* This needs to be position relative.*/
+        position: relative;  
+        
+        /* z-index needs to be set to a negative number, below the circular image.*/
+        z-index: -10;
+        
+        display: inline-block;
+        width: 1024px;
+        height: 200px;
+        
+        /* This number may need to be adjusted if any changes are made
+        to border thickness. */
+        margin-top: -114px;
+        background-color: #ccc;
+        vertical-align: top;
+      }
+      
+      /* This is basic information frame style */
+      .info-frame {        
+        display: inline-block;
+        width: 1024px;
+        height: 50px;
+        
+        margin-top: 0px 10px 0px 10px;
+        background-color: #ccc;
+        vertical-align: top;
+        text-align:left;
+      }
+      
+      /* This is content frame style */
+      .content-frame {        
+        display: inline-block;
+        width: 1024px;
+        height: 100%;
+        
+        /* This number may need to be adjusted if any changes are made
+        to border thickness. */
+        margin-top: 0px 10px 50px 10px;
+        background-color: #ccc;
+        vertical-align: top;
+        text-align:left;
       }
     </style> 
   </head> 
-  <body style="background-color:#06242f;text-align:center">
-    <table style="max-width:1024px;margin:auto;min-width:1024px;height:100%;border-style:solid;font-family:'Libre Baskerville',Georgia,serif;color:#dddddd">
-      <thead>
-        <tr><th rowspan="4" style="width:250px;text-align:center"><div class="profile-picture centered"><img src="img/portrait.jpg"/></div></th></tr>
-        <tr><th></th><th>Savings</th><th>Savings</th></tr>
-        <tr><th></th><th>Savings</th><th>Savings</th></tr>
-        <tr><th></th><th>Savings</th><th>Savings</th></tr>
-        
-        <tr><th>Chico Wu</th><th>Savings</th><th>Savings</th></tr>
-        <tr><th>C++ Software Engineer</th><th>Savings</th><th>Savings</th></tr>
-        <tr><th></th><th>Savings</th><th>Savings</th></tr>
-      </thead>
-
-      <tfoot>
-        <tr>
-          <td>Sum</td>
-          <td>$180</td>
-        </tr>
-      </tfoot>
-
-      <tbody>
-        <tr>
-          <td>January</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>February</td>
-          <td>$80</td>
-        </tr>
-      </tbody>
-    </table>
+  <body style="background-color:#1b1b1b;text-align:center">
+    <h1 class="memo">Chico's Programming Life</h1>
+    <div class="box">
+      <span>
+        <img src="img/portrait.jpg" class="bio-photo text-center"></span>
+      <div class="box2"></div>
+    </div</div>
+    <div class="info-frame">
+      <div>
+        <p>information</p>
+      </div>
+    </div>
+    <div class="content-frame">
+      <div>
+        <p>content</p>
+      </div>
+    </div>
   </body> 
 </html> 
